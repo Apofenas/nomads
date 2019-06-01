@@ -299,13 +299,13 @@ function CometTryExpGhettoGunship(self)
 
     local unit = GetExperimentalUnit(self)
 
-    if unit:GetUnitId() ~= 'ina4001' then
+    if unit:GetUnitId() ~= 'xna0401' then
         return
     end
 
     --LOG('*DEBUG: AI starting CometTryExpGhettoGunship for unit '..repr(unit:GetUnitId()))
 
-    local BeamerCat = ParseEntityCategory( 'INU2007' )  -- this unit can be used to form exp ghetto gunship
+    local BeamerCat = ParseEntityCategory( 'xnl0402' )  -- this unit can be used to form exp ghetto gunship
     local BeamerFindRadius = 30
     local brain = unit:GetAIBrain()
     local army = unit:GetArmy()
@@ -404,7 +404,7 @@ CommanderBombardPriorityList = {
 }
 
 function CommanderBombardThread(cdr, platoon)
-    if cdr:GetUnitId() ~= 'inu0001' then return end
+    if cdr:GetUnitId() ~= 'xnl0001' then return end
     --LOG('*DEBUG: AI CommanderBombardThread')
 
     WaitTicks( Random(50,650) )  -- to avoid the artificial appearance when all AI players use their intel probe at the same time
@@ -418,7 +418,7 @@ function CommanderBombardThread(cdr, platoon)
     local LastTargetsCounter = 1
     local location, targetUnits, target, friendlies, TMDs, range, upos, tpos, DoRangeCheck, AbilityRangeCheckUnits, BestUnit, BestUnitAdjNum, UnitAdjNum
 
-    local BombardUnitBp = __blueprints['ino0001']
+    local BombardUnitBp = __blueprints['xno0001']
     local Damage = BombardUnitBp.Weapon[1].Damage
     local DamageRadius = BombardUnitBp.Weapon[1].DamageRadius  -- damage radius of the missiles
     local NumTargets = BombardUnitBp.SpecialAbilities.NomadsAreaBombardment.WantNumTargets or 1
@@ -686,7 +686,7 @@ function CommanderBombardThreadSorian(cdr, platoon)
 end
 
 function CommanderIntelProbeThread(cdr, platoon)
-    if cdr:GetUnitId() ~= 'inu0001' then
+    if cdr:GetUnitId() ~= 'xnl0001' then
         return
     end
 

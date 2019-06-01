@@ -27,9 +27,6 @@ BuffBlueprint {
         RadarRadius = {
             Mult = 1.3,
         },
-        BuildRate = {
-            Mult = 1.3,
-        },
         VisionRadius = {
             Mult = 1.3,
         },
@@ -87,8 +84,7 @@ BuffBlueprint {
     Duration = -1,
     Affects = {
         BuildRate = {
-            Add = 30,
-            Mult = 1,
+            Mult = 2,
         },
     },
 }
@@ -100,18 +96,19 @@ BuffBlueprint {
     Stacks = 'REPLACE',
     Duration = -1,
     Affects = {
-        VisionRadius = {
-            Add = 0,
-            Mult = 1.5,
-        },
+--        VisionRadius = {
+--            Add = 0,
+--            Mult = 1.5,
+--        },
 --        RadarRadius = {
---            Add = 0,
---            Mult = 1.25,
+--            Mult = 4,
+--        },		
+--        SonarRadius = {
+--            Mult = 4,
 --        },
---        OmniRadius = {
---            Add = 0,
---            Mult = 1.25,
---        },
+        OmniRadius = {
+            Mult = 2,
+        },
     },
 }
 
@@ -124,8 +121,7 @@ BuffBlueprint {
     Duration = -1,
     Affects = {
         Regen = {
-            Add = 100,
-            Mult = 1,
+            Mult = 2,
         },
     },
 }
@@ -138,8 +134,7 @@ BuffBlueprint {
     Duration = -1,
     Affects = {
         RateOfFire = {
-            Add = 0,
-            Mult = 1.2,  -- remember that values below 1 actually boost the rof!
+            Mult = 0.34,  -- remember that values below 1 actually boost the rof!
         },
     },
 }
